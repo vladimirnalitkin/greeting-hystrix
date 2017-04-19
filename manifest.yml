@@ -1,0 +1,12 @@
+applications:
+- name: greeting-hystrix
+  instances: 1
+  memory: 512M
+  path: ./target/greeting-hystrix-0.0.1-SNAPSHOT.jar
+  services:
+    - config-server
+    - service-registry
+    - circuit-breaker-dashboard
+  #routes:
+  #- route: trapps-api.api.system.luxoft-pcf.com
+
